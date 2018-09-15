@@ -14,6 +14,8 @@ namespace UtilityLibrary
 
         void Delete(TK id);
 
+        void Delete(TEntity entity);
+
         IQueryable<TEntity> Items { get; }
     }
 
@@ -47,6 +49,11 @@ namespace UtilityLibrary
         public void Delete(TK id)
         {
             var entity = FindById(id);
+            context.Set<TEntity>().Remove(entity);
+        }
+
+        public void Delete(TEntity entity)
+        {
             context.Set<TEntity>().Remove(entity);
         }
     }
