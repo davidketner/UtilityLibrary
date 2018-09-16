@@ -15,8 +15,8 @@ namespace UtilityLibrary
         public DateTime Created { get; set; }
         public DateTime? Updated { get; set; }
         public DateTime? Deleted { get; set; }
-        public string UserCreated { get; set; }
-        public string UserUpdated { get; set; }
-        public string UserDeleted { get; set; }
+        public string UserCreatedId { get; set; }
+        public string UserUpdatedId { get; set; }
+        public string UserDeletedId { get; set; }
     }
 }
